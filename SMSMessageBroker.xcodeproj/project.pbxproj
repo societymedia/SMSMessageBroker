@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1542701ACF34E475084ADE9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15427361D147FD9C452B6569 /* Foundation.framework */; };
+		1542705B0EB37EF446045F8A /* SMSMessageBrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1542766CD52301A3729BE9ED /* SMSMessageBrokerTests.m */; };
+		15427155F9FF0EACA49159D5 /* libSMSMessageBroker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 154275E51D3280EA0A278331 /* libSMSMessageBroker.a */; };
+		15427275824B952750711FE5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154271BF76CA6DDC685F6122 /* UIKit.framework */; };
+		154272F1C9E4BC2BD0B37237 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15427361D147FD9C452B6569 /* Foundation.framework */; };
+		15427773FC5FE941BE76B25A /* SMSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 15427953DD3DB4D80021BCA8 /* SMSMessage.m */; };
+		154278FF1E777552E7B240FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15427654F2BCA2A66FF75EE0 /* InfoPlist.strings */; };
+		15427C2185EA5320707C3676 /* SMSMessageBroker.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 154271DB445BD842CC89E5E2 /* SMSMessageBroker.h */; };
+		15427C49BE9DB32DCCD3F378 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154277817FD365EEDEB83940 /* XCTest.framework */; };
+		15427D4525EEB9B27C6DEE1A /* SMSMessageBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 15427CC803CAF12553CCE479 /* SMSMessageBroker.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		154273C5705E57806A476D4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1542753B571A71CE999E3438 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15427647E18CCA2F7CD79626;
+			remoteInfo = SMSMessageBroker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1542764D0757C1A60BCFD778 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				15427C2185EA5320707C3676 /* SMSMessageBroker.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		154271BF76CA6DDC685F6122 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		154271DB445BD842CC89E5E2 /* SMSMessageBroker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMSMessageBroker.h; sourceTree = "<group>"; };
+		15427361D147FD9C452B6569 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		154274C4C082E2E79A7AD03C /* SMSMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSMessage.h; sourceTree = "<group>"; };
+		154275B8A6F71FAE6742D7E6 /* SMSMessageBrokerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMSMessageBrokerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		154275E51D3280EA0A278331 /* libSMSMessageBroker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSMSMessageBroker.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1542766CD52301A3729BE9ED /* SMSMessageBrokerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSMessageBrokerTests.m; sourceTree = "<group>"; };
+		154277817FD365EEDEB83940 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		15427867F896DA68AFA9665C /* SMSMessageBrokerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "SMSMessageBrokerTests-Info.plist"; sourceTree = "<group>"; };
+		15427953DD3DB4D80021BCA8 /* SMSMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSMessage.m; sourceTree = "<group>"; };
+		154279839504A80841457EB6 /* SMSMessageBroker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMSMessageBroker-Prefix.pch"; sourceTree = "<group>"; };
+		15427CB9E63369A61EC95FC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		15427CC803CAF12553CCE479 /* SMSMessageBroker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMSMessageBroker.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15427092CF43A5E603093CA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15427C49BE9DB32DCCD3F378 /* XCTest.framework in Frameworks */,
+				1542701ACF34E475084ADE9F /* Foundation.framework in Frameworks */,
+				15427275824B952750711FE5 /* UIKit.framework in Frameworks */,
+				15427155F9FF0EACA49159D5 /* libSMSMessageBroker.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15427D73B07AA6E96B597A27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				154272F1C9E4BC2BD0B37237 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		154272A8FABD933D33277C23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				154275E51D3280EA0A278331 /* libSMSMessageBroker.a */,
+				154275B8A6F71FAE6742D7E6 /* SMSMessageBrokerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		154273C218F95C2AE0F2D793 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				154279839504A80841457EB6 /* SMSMessageBroker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1542753D38E24CE70888412F /* SMSMessageBroker */ = {
+			isa = PBXGroup;
+			children = (
+				154273C218F95C2AE0F2D793 /* Supporting Files */,
+				154271DB445BD842CC89E5E2 /* SMSMessageBroker.h */,
+				15427CC803CAF12553CCE479 /* SMSMessageBroker.m */,
+				15427953DD3DB4D80021BCA8 /* SMSMessage.m */,
+				154274C4C082E2E79A7AD03C /* SMSMessage.h */,
+			);
+			path = SMSMessageBroker;
+			sourceTree = "<group>";
+		};
+		154278D6C57D3E0CFFD76D63 /* SMSMessageBrokerTests */ = {
+			isa = PBXGroup;
+			children = (
+				15427DCD34FBE90C071A9A5A /* Supporting Files */,
+				1542766CD52301A3729BE9ED /* SMSMessageBrokerTests.m */,
+			);
+			path = SMSMessageBrokerTests;
+			sourceTree = "<group>";
+		};
+		154279D7B403EBE76F53B00F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15427361D147FD9C452B6569 /* Foundation.framework */,
+				154277817FD365EEDEB83940 /* XCTest.framework */,
+				154271BF76CA6DDC685F6122 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15427DCD34FBE90C071A9A5A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15427867F896DA68AFA9665C /* SMSMessageBrokerTests-Info.plist */,
+				15427654F2BCA2A66FF75EE0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15427FAAA638B30B304BFB14 = {
+			isa = PBXGroup;
+			children = (
+				154272A8FABD933D33277C23 /* Products */,
+				154279D7B403EBE76F53B00F /* Frameworks */,
+				1542753D38E24CE70888412F /* SMSMessageBroker */,
+				154278D6C57D3E0CFFD76D63 /* SMSMessageBrokerTests */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		154272C348C1568E92B3A051 /* SMSMessageBrokerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15427DB2A31AA91E3163B9E7 /* Build configuration list for PBXNativeTarget "SMSMessageBrokerTests" */;
+			buildPhases = (
+				154277B47325104A8651EE58 /* Sources */,
+				15427092CF43A5E603093CA0 /* Frameworks */,
+				1542705E2FC733F1A05E68CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15427F329493925D30F54F59 /* PBXTargetDependency */,
+			);
+			name = SMSMessageBrokerTests;
+			productName = SMSMessageBrokerTests;
+			productReference = 154275B8A6F71FAE6742D7E6 /* SMSMessageBrokerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		15427647E18CCA2F7CD79626 /* SMSMessageBroker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15427BFDE296776609BED9C9 /* Build configuration list for PBXNativeTarget "SMSMessageBroker" */;
+			buildPhases = (
+				154277A308225AA6544B65BE /* Sources */,
+				15427D73B07AA6E96B597A27 /* Frameworks */,
+				1542764D0757C1A60BCFD778 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMSMessageBroker;
+			productName = SMSMessageBroker;
+			productReference = 154275E51D3280EA0A278331 /* libSMSMessageBroker.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1542753B571A71CE999E3438 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = societymedia;
+			};
+			buildConfigurationList = 1542731AE7027BA0D0F29913 /* Build configuration list for PBXProject "SMSMessageBroker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 15427FAAA638B30B304BFB14;
+			productRefGroup = 154272A8FABD933D33277C23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15427647E18CCA2F7CD79626 /* SMSMessageBroker */,
+				154272C348C1568E92B3A051 /* SMSMessageBrokerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1542705E2FC733F1A05E68CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				154278FF1E777552E7B240FF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		154277A308225AA6544B65BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15427D4525EEB9B27C6DEE1A /* SMSMessageBroker.m in Sources */,
+				15427773FC5FE941BE76B25A /* SMSMessage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		154277B47325104A8651EE58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1542705B0EB37EF446045F8A /* SMSMessageBrokerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15427F329493925D30F54F59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15427647E18CCA2F7CD79626 /* SMSMessageBroker */;
+			targetProxy = 154273C5705E57806A476D4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		15427654F2BCA2A66FF75EE0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15427CB9E63369A61EC95FC1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		154274349196032DA08368B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SMSMessageBroker.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SMSMessageBroker/SMSMessageBroker-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		154277F51FCF78B6EB944176 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1542796CB7D91F6993221B8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SMSMessageBroker.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SMSMessageBroker/SMSMessageBroker-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		154279970BB63B25691F5E39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SMSMessageBroker/SMSMessageBroker-Prefix.pch";
+				INFOPLIST_FILE = "SMSMessageBrokerTests/SMSMessageBrokerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		15427B9907DF0FF003783D11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SMSMessageBroker/SMSMessageBroker-Prefix.pch";
+				INFOPLIST_FILE = "SMSMessageBrokerTests/SMSMessageBrokerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		15427E556B96C19E4C55DCD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1542731AE7027BA0D0F29913 /* Build configuration list for PBXProject "SMSMessageBroker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				154277F51FCF78B6EB944176 /* Release */,
+				15427E556B96C19E4C55DCD1 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15427BFDE296776609BED9C9 /* Build configuration list for PBXNativeTarget "SMSMessageBroker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				154274349196032DA08368B4 /* Release */,
+				1542796CB7D91F6993221B8D /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		15427DB2A31AA91E3163B9E7 /* Build configuration list for PBXNativeTarget "SMSMessageBrokerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				154279970BB63B25691F5E39 /* Release */,
+				15427B9907DF0FF003783D11 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1542753B571A71CE999E3438 /* Project object */;
+}
