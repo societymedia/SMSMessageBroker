@@ -15,10 +15,16 @@
 
 @interface SMSMessageBroker : NSObject<SMSEventAgregatorProtocol> {}
 + (SMSMessageBroker *)sharedInstance;
-- (void)trigger:(NSString *)name onSender:(id)sender withUserdata:(NSDictionary *)userdata;
-- (void)on:(NSString*)name performAction:(SEL)msg observeOn:observedObject forget:(BOOL)forget;
-- (void)on:(NSString*)name performAction:(SEL)msg observeOn:(id)observedObject;
-- (id)on:(NSString *)identifier performAction:(SEL)action observeOn:(id)observeOn observeFrom:(id)sender userData:(NSDictionary *)data block:(void (^) (NSNotification *notification))block;
+- (void)trigger:(NSString *)name;
 
+- (void)on:(NSString*)name performAction:(SEL)msg observeOn:(id)observeOn;
+- (void)on:(NSString*)name performAction:(SEL)msg observeOn:(id)observeOn fireAndForget:(BOOL)fireAndForget;
+- (void)on:(NSString*)name performAction:(SEL)msg observeOn:(id)observeOn observeFrom:(id)observeFrom;
+- (void)on:(NSString*)name performAction:(SEL)msg observeOn:(id)observeOn observeFrom:(id)observeFrom fireAndForget:(BOOL)fireAndForget;
+
+
+
+- (id)on:(NSString *)identifier performAction:(SEL)action observeOn:(id)observeOn observeFrom:(id)sender userData:(NSDictionary *)data block:(void (^) (NSNotification *notification))block;
+- (void)addMessage:(SMSMessage *)message;
 @end
 

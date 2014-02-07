@@ -37,56 +37,77 @@
 
 
 #pragma mark Trigger Methods
--(void)trigger:(NSString *)identifier onSender:sender withUserdata:(NSDictionary*) userdata{
+-(void)trigger:(NSString *)identifier {
 
-    [[NSNotificationCenter defaultCenter] postNotificationName:identifier
-                                                        object:sender
-                                                      userInfo: userdata];
+    SMSMessage *message = [__internalMessageStorage objectForKey:identifier];
 
-    if([__internalMessageStorage objectForKey:identifier]) {
-       [self removeByIdentifier:identifier withObject:sender];
+    if(message) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:identifier
+                                                            object:message.observeOn
+
+                                                          userInfo:message.userdata];
+
+
+        if(message.fireAndForget) {
+            [self removeMessage:message];
+        }
     }
 }
+
+
 
 #pragma mark Registration Methods
 
 
 
--(void)on:(NSString*)name performAction:(SEL)msg observeOn:observedObject forget:(BOOL)forget {
-    if(forget) {
-        [__internalMessageStorage setObject:observedObject forKey:name];
-    }
-    [[NSNotificationCenter defaultCenter] addObserver:observedObject selector:msg name:name object:nil];
+
+
+- (void)on:(NSString *)name performAction:(SEL)msg observeOn:(id)observeOn
+{
+    [self on:name performAction:msg observeOn:observeOn fireAndForget:NO];
 }
 
-- (void)on:(NSString *)name performAction:(SEL)msg observeOn:(id)observedObject
+- (void)on:(NSString *)name performAction:(SEL)msg observeOn:(id)observeOn fireAndForget:(BOOL)fireAndForget
+{
+    [self on:name performAction:msg observeOn:observeOn observeFrom:nil fireAndForget:fireAndForget];
+}
+
+- (void)on:(NSString *)name performAction:(SEL)msg observeOn:(id)observeOn observeFrom:(id)observeFrom
+{
+   [self on:name performAction:msg observeOn:observeOn observeFrom:observeFrom fireAndForget:NO];
+}
+
+- (void)on:(NSString *)name performAction:(SEL)msg observeOn:(id)observedOn observeFrom:(id)observeFrom fireAndForget:(BOOL)fireAndForget
 {
     SMSMessage *message = [SMSMessage new];
     message.identifier = name;
     message.actionToPerform = msg;
-    message.actionOn = observedObject;
+    message.observeOn = observedOn;
+    message.observeFrom = observeFrom;
+    message.fireAndForget = fireAndForget;
 
-
+    
     [self addEventToInternalStorage:name withMessage:message];
 }
-
 
 - (id)on:(NSString *)identifier performAction:(SEL)action observeOn:(id)observeOn observeFrom:(id)sender userData:(NSDictionary *)data block:(void (^) (NSNotification *notification))block {
     return nil;
 }
 
 #pragma mark Private Methods
-- (void)removeByIdentifier:(NSString *)identifier withObject:(id)observedObject {
 
-    [__internalMessageStorage removeObjectForKey:identifier];
-    [[NSNotificationCenter defaultCenter] removeObserver:observedObject name:identifier object:nil];
+- (void)removeMessage:(SMSMessage *)message
+{
+    [__internalMessageStorage removeObjectForKey:message.identifier];
+    [[NSNotificationCenter defaultCenter] removeObserver:message.observeOn name:message.identifier object:nil];
 }
 
 - (void)addEventToInternalStorage:(NSString *)identifier withMessage:(SMSMessage *)message {
-
+    
+    // we only want to add the message once 
     if(![__internalMessageStorage objectForKey:identifier]){
         [__internalMessageStorage setObject:message forKey:identifier];
-        [[NSNotificationCenter defaultCenter] addObserver:message.actionOn selector:message.actionToPerform name:message.identifier object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:message.observeOn selector:message.actionToPerform name:message.identifier object:message.observeFrom];
     }
 }
 

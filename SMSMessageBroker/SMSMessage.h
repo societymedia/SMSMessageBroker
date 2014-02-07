@@ -10,5 +10,8 @@
 @interface SMSMessage : NSObject
 @property (nonatomic, strong) NSString *identifier;
 @property (nonatomic, assign) SEL actionToPerform;
-@property (nonatomic, strong) id actionOn;
+@property (nonatomic, strong) id observeOn;
+@property(nonatomic) BOOL fireAndForget;
+@property(nonatomic, strong) NSDictionary *userdata;
+@property(nonatomic, strong) id observeFrom;
 @end
